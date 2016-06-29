@@ -1,0 +1,11 @@
+d7036098e585642181ab6c0becb2aca3 *DESCRIPTION
+b36e418cd6ce5ea16b0d4115c7ec19fc *LICENSE
+018dff867a510b6b41396f973d7fccb0 *NAMESPACE
+c93d67f761c10130748e06c605f34753 *NEWS
+f6ebe9ef3e7c64f6b1f21d3671d1302d *R/mainFunctions.R
+34ac8f66ba9ca52c4cf4e83a22e554d3 *R/roccv.r
+dc940d2f579d3292dd37b0d05b632029 *man/cv.Rd
+598cf27830745d4a0d474bc1108e21b8 *man/fit_pred_fold.Rd
+21cf7bcd9d0255bc6227d70a0c177983 *man/randomly_assign.Rd
+a9b864220cc423ff9174dbffe239a711 *man/roccv.Rd
+01a505a77d9aafdfad6b1045e3469276 *man/rocplot.Rd
