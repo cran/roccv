@@ -23,6 +23,6 @@ folds_10 <- randomly_assign(n,10)
 folds_5 <- randomly_assign(n,5)
 }
 \author{
-Ben Sherwood <bsherwo2@jhu.edu>
+Ben Sherwood <ben.sherwood@ku.edu>
 }
 

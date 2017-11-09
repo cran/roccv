@@ -48,6 +48,6 @@ gx <- x[,c(2,3,4,6,7,8)]
 cvf <- cv(genomic_x=gx,clinical_formula=y~x1+x5,data=combined_data,method_name="with_form")
 }
 \author{
-Ben Sherwood <bsherwo2@jhu.edu>
+Ben Sherwood <ben.sherwood@ku.edu>
 }
 

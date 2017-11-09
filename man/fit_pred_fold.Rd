@@ -37,6 +37,6 @@ fold_1_results <- fit_pred_fold(1,x,y,folds_10,"glm","binomial")
 fold_2_results <- fit_pred_fold(2,x,y,folds_10,"glm","binomial") 
 }
 \author{
-Ben Sherwood <bsherwo2@jhu.edu>
+Ben Sherwood <ben.sherwood@ku.edu>
 }
 

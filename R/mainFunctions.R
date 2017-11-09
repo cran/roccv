@@ -20,7 +20,7 @@
 #'combined_data <- data.frame(y=y,x1=x[,1],x5=x[,5])
 #'gx <- x[,c(2,3,4,6,7,8)]
 #'cvf <- cv(genomic_x=gx,clinical_formula=y~x1+x5,data=combined_data,method_name="with_form")
-#'@author Ben Sherwood <bsherwo2@@jhu.edu>
+#'@author Ben Sherwood <ben.sherwood@@ku.edu>
 #'@export
 cv <- function(clinical_x=NULL, genomic_x=NULL, y=NULL, data=NULL, clinical_formula=NULL, family="binomial",folds=NULL, k=10, fit_method="glm", method_name=NULL,n.cores=1,...){
 	if(is.null(y) & is.null(clinical_formula)){
@@ -41,7 +41,7 @@ cv <- function(clinical_x=NULL, genomic_x=NULL, y=NULL, data=NULL, clinical_form
 	if(is.null(clinical_formula)==FALSE){
 		#clinical_formula <- update.formula(clinical_formula, y ~ .)
 		clinical_model <- glm(clinical_formula,family=family,data=data)
-		clinical_x <- model.matrix(clinical_model)[,-1]
+		clinical_x <- model.matrix(clinical_model)[,-1,drop=FALSE]
 		y <- clinical_model$y
 		non_pen_vars <- 1:dim(clinical_x)[2]
 	} else{
@@ -76,7 +76,7 @@ cv <- function(clinical_x=NULL, genomic_x=NULL, y=NULL, data=NULL, clinical_form
 #'n <- 100
 #'folds_10 <- randomly_assign(n,10)
 #'folds_5 <- randomly_assign(n,5)
-#'@author Ben Sherwood <bsherwo2@@jhu.edu>
+#'@author Ben Sherwood <ben.sherwood@@ku.edu>
 #'@export
 randomly_assign <- function(n,k){
 #randomly assign n samples into k groups
@@ -111,7 +111,7 @@ randomly_assign <- function(n,k){
 #'y <- runif(100) < exp(1 + x[,1] + x[,5])/(1+exp(1 + x[,1] + x[,5]))
 #'fold_1_results <- fit_pred_fold(1,x,y,folds_10,"glm","binomial")
 #'fold_2_results <- fit_pred_fold(2,x,y,folds_10,"glm","binomial") 
-#'@author Ben Sherwood <bsherwo2@@jhu.edu>
+#'@author Ben Sherwood <ben.sherwood@@ku.edu>
 #'@export
 fit_pred_fold <- function(i,x,y,folds,fit_method,family,non_pen_vars=NULL,...){
 	if(is.null(dim(x))){
@@ -160,7 +160,7 @@ fit_pred_fold <- function(i,x,y,folds,fit_method,family,non_pen_vars=NULL,...){
 #'cvf <- cv(genomic_x=gx,clinical_formula=y~x1+x5,data=combined_data,method_name="with_form")
 #'total_results <- rbind(cv_results,cvf)
 #'rocplot(total_results,main="rocplot test")
-#'@author Ben Sherwood <bsherwo2@@jhu.edu>
+#'@author Ben Sherwood <ben.sherwood@@ku.edu>
 #'@export
 rocplot <- function(plot_data,...){
 	method_count <- 1

@@ -1,2 +1,10 @@
+rqPen 1.1 (Release date: 2017-11-08)
+==============
+
+Changes:
+
+* Fixed bug that caused cv() function to fail when clinical formula only had one predictor.
+* Updated email address. 
+
 roccv 1.0 (Release date: 2016-06-28)
 ==============
