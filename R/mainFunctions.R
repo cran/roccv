@@ -130,6 +130,13 @@ fit_pred_fold <- function(i,x,y,folds,fit_method,family,non_pen_vars=NULL,...){
 		colnames(train_x) <- paste0("x",1:p)
 		train_x <- cbind(train_x,train_y)
 		train_model <- glm(train_y ~ ., family, train_x, ...)
+		if(is.null(dim(test_x))){
+			a <- NULL
+			for(i in 1:p){
+				a <- cbind(a,test_x[i])
+			}
+			test_x <- a
+		} 
 		test_x <- data.frame(test_x)
 		colnames(test_x) <- colnames(train_x)[1:p]
 		preds <- predict(train_model,test_x,type="response")

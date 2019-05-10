@@ -1,4 +1,8 @@
-rqPen 1.1 (Release date: 2017-11-08)
+roccv 1.2 (Release data: 2019-05-10)
+
+* Fixed bug so that cv() function worked for leave-one-out cross validation. 
+
+roccv 1.1 (Release date: 2017-11-08)
 ==============
 
 Changes:

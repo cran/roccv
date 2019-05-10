@@ -1,8 +1,8 @@
 Package: roccv
 Type: Package
 Title: ROC for Cross Validation Results
-Version: 1.1
-Date: 2017-11-08
+Version: 1.2
+Date: 2019-05-10
 Author: Ben Sherwood [aut, cre]
 Depends: R (>= 3.0.0), glmnet, parallel, pROC
 Maintainer: Ben Sherwood <ben.sherwood@ku.edu>
@@ -11,6 +11,6 @@ ByteCompile: TRUE
 License: MIT + file LICENSE
 RoxygenNote: 5.0.1
 NeedsCompilation: no
-Packaged: 2017-11-08 22:18:10 UTC; bsherwoo
+Packaged: 2019-05-10 15:51:48 UTC; bsherwoo
 Repository: CRAN
-Date/Publication: 2017-11-09 18:43:42 UTC
+Date/Publication: 2019-05-10 16:20:03 UTC
